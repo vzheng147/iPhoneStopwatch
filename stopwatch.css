@@ -1,0 +1,102 @@
+
+.timer p{
+  color: white;
+  font-size: 105px;
+}
+
+hr {
+  width: 1000px;
+  color: white;
+  height: 1px;
+  
+}
+
+.container{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  border-width: 5px;
+  height: 90vh; 
+}
+
+.timer{
+  margin: auto;
+  flex: 2;
+}
+
+.controls{
+  margin: auto;
+  flex: 2;
+}
+
+.controls button{
+  border: 1px solid black;
+  font-size: 24px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transition: opacity .35s;
+}
+
+.controls button:active{
+  opacity: .65;
+}
+
+.lapButton{
+  color: white;
+  background-color: gray;
+}
+
+.initialLapButton{
+  opacity: .75;
+  color: white;
+  background-color: gray;
+}
+
+.startButton {
+  color: rgb(94, 215, 94);
+  background-color: green;
+}
+
+.stopButton {
+  color: rgb(244, 78, 78);
+  background-color: rgb(175, 39, 39);
+}
+
+.currentLap{
+  margin: auto;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 500px;
+}
+
+.lapContainer{
+  margin: auto;
+  color: white;
+  font-size: 40px;
+}
+
+.lapNumber{
+  margin-right: 55px;
+  display: inline-block;
+}
+
+.lapTimer{
+  margin-left: 55px;
+  display: inline-block;
+}
+
+.lapsContainer{
+  flex-grow: 1;
+  font-size: 40px;
+  height: 10000px;
+  margin: auto;
+  background-color: black;
+  color: white;
+}
+
+.innerContainer{
+  margin: auto;
+}
+
+

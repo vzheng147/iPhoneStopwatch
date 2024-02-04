@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iPhone Stopwatch Clone</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width = device-width initial-scale = 1.0">
+    <link rel = "stylesheet" href = "stopwatch.css">
+  </head>
+  <body>
+    <div class = "container">
+
+      <div class = "timer">
+        <p>
+          <span class = "js-min">00</span>
+          :
+          <span class = "js-sec">00</span>
+          .
+          <span class = "js-hundredthSec">00</span>
+        </p>
+      </div>
+
+      <div class = "controls">
+
+        <button class = "initialLapButton lapButton js-LapOrResetButton">
+          Lap
+        </button>
+
+        <button class = "startButton js-StartOrStopButton">
+          Start
+        </button>
+      </div>
+
+      <hr>
+
+      <div class = "currentLap">
+  
+        <div class = "lapContainer js-lapContainer">
+
+          <p class = "lapNumber js-lapNumber">Lap 1</p>
+
+          <p class = "lapTimer">
+            <span class = "js-lapMin">00</span>
+            :
+            <span class = "js-lapSec">00</span>
+            .
+            <span class = "js-lapHundredthSec">00</span>
+          </p>
+
+        </div>
+
+      
+      </div>
+
+      <div class = "lapsContainer js-laps">
+        <div class = "innerContainer laps">
+  
+        </div>
+      </div>
+    
+    </div>
+
+
+    <script src = "logs.js"></script>
+    <script src = "buttons.js"></script>
+  </body>
+</html>
