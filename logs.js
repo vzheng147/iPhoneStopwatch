@@ -49,7 +49,7 @@ function updateLapTimerHTML(){
 function updateLog(){
   const timeOfLap = logs[index]; 
   const html = `
-    <div class="">
+    <div class="js-text-color-interval js-lap${index+1}">
       <p class="lapNumber loggedLapNumber">Lap ${index+1}</p>
       <p class="lapTimer">
         <span class="loggedMin">${addZeroToSingle(timeOfLap[0])}</span> :
@@ -122,8 +122,4 @@ function updateLongestInterval(){
     console.log(document.querySelector(`.js-lap${highestIndex+1}`).classList.add('longestIntervalText'));
   }
 }
-
-
-
-
 
