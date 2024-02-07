@@ -61,19 +61,67 @@ function updateLog(){
   document.querySelector('.innerContainer').innerHTML = html + document.querySelector('.innerContainer').innerHTML;
 }
 
-let lowest = [0, 0, 0];
-
-function updateLowest(){
-  logs.forEach((lap, index) => {
-    if (lowest[0] > lap[0]){
-      
-    } else if (lowest[0] == lap[0]){
-
-    } 
-  })
+function updateQuickestInterval(){
+  if (logs.length >= 2){
+    let lapSection = document.querySelectorAll('.js-text-color-interval');
+    lapSection.forEach((element)=> element.classList.remove('quickestIntervalText'));
+    let lowestIndex = 0;
+    let lowestInterval = logs[lowestIndex];
+    logs.forEach((element, index) => {
+      lowestInterval = logs[lowestIndex];
+      if (index === 0){
+        console.log('Index 0');
+        return;
+      }
+      if (lowestInterval[0] > element[0]) {
+        lowestIndex = index;
+        console.log("Lowest Min");
+      } else if (lowestInterval[0] === element[0]) {
+          if (lowestInterval[1] > element[1]) {
+            lowestIndex = index;
+            console.log("Lowest Second");
+          } else if (lowestInterval[1] === element[1]) {
+            if (lowestInterval[2] > element[2]) {
+                lowestIndex = index;
+                console.log("Lowest Mili Second");
+            }
+          }
+      } 
+    });
+    document.querySelector(`.js-lap${lowestIndex+1}`).classList.add('quickestIntervalText');
+  }
 }
 
-let highest = [0,0,0];
+function updateLongestInterval(){
+  if (logs.length >= 2){
+    let lapSection = document.querySelectorAll('.js-text-color-interval');
+    lapSection.forEach((element)=> element.classList.remove('longestIntervalText'));
+    let highestIndex = 0;
+    let highestInterval = logs[highestIndex];
+    logs.forEach((element, index) => {
+      highestInterval = logs[highestIndex];
+      if (index === 0){
+        console.log('Index 0');
+        return;
+      }
+      if (highestInterval[0] < element[0]) {
+        highestIndex = index;
+        console.log("Lowest Min");
+      } else if (highestInterval[0] === element[0]) {
+          if (highestInterval[1] < element[1]) {
+            highestIndex = index;
+            console.log("Lowest Second");
+          } else if (highestInterval[1] === element[1]) {
+            if (highestInterval[2] < element[2]) {
+                highestIndex = index;
+                console.log("Lowest Mili Second");
+            }
+          }
+      } 
+    });
+    console.log(document.querySelector(`.js-lap${highestIndex+1}`).classList.add('longestIntervalText'));
+  }
+}
 
 
 
