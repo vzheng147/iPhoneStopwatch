@@ -11,6 +11,8 @@ function lapOrResetButtonHandler(){
   if (lapOrResetButtonElement.innerHTML.trim() === 'Lap'){
     logs.push(lapTime);
     updateLog();
+    updateQuickestInterval();
+    updateLongestInterval();
     lapTime = [0, 0, 0];
   } else if (lapOrResetButtonElement.innerHTML.trim() === 'Reset'){
     clearInterval(clearIntervalID);
