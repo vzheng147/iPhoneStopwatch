@@ -89,7 +89,6 @@ hr {
 .lapsContainer{
   flex-grow: 1;
   font-size: 40px;
-  height: 10000px;
   margin: auto;
   background-color: black;
   color: white;
@@ -106,5 +105,3 @@ hr {
 .longestIntervalText{
   color: lightcoral;
 }
-
-
