@@ -99,4 +99,12 @@ hr {
   margin: auto;
 }
 
+.quickestIntervalText{
+  color: lightgreen;
+}
+
+.longestIntervalText{
+  color: lightcoral;
+}
+
 
